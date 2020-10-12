@@ -16,17 +16,28 @@ The Power of Plots.
 ## Mouse Data
 Add more general information about project. What the purpose of the project is? Motivation?
 
+![Summary Statistics](./img/summary_stat.PNG)
+
 ## Mouse Gender
-![Example screenshot](./img/screenshot.png)
+
+![Mice by Gender](./img/gender.PNG)
 
 ## Drug Regimens
+
+![Drug Regimens](./img/datapoints_reg.PNG)
+
+![Box Plots](./img/box_plot.PNG)
 
 ## Capomulin Deep Dive
 Describe how to install / setup your local environement / add link to demo version.
 
+![Capomulin Treatment](./img/mouseID.PNG)
+
 ## Correlation
 Show examples of usage:
 `put-your-code-here`
+
+![Line Regress](./img/line_reg_corr.PNG)
 
 ## Conclusion
 List of features ready and TODOs for future development
