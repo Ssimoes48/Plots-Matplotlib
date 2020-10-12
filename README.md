@@ -69,7 +69,7 @@ To create this set of data, I used a `.grouby` function on my clean data to grou
 Then I used `pd.merge` to combine the clean mice data and my new `Max Timepoint` data. I merged the data on Mouse ID and Timepoint. 
 ` combined_timepoint_df = pd.merge(combined_mice_df, max_timepoint, on=["Mouse ID", "Timepoint"])` 
 
-With the newly combined `DataFrame` that captures the last timepoint recorded of tumor volume, I created a list per drug regimen to hold these volumes. With each list, I calculated the outlier data by using the upper and lower bounds. I found that only the drug Infubinol had an outlier in the tumor volume data. 
+With the newly combined `DataFrame` that captures the last timepoint recorded of tumor volume, I created a list per drug regimen to hold these volumes. With each list, I calculated the `outlier` data by using the `upper` and `lower` bounds. I found that only the drug Infubinol had an `outlier` in the tumor volume data. 
 
 With this data calculated for each of the four specific drug regimens, I then created a combined `box plot`. I did this by creating a `[list]` of my drug regimen `lists` to plot. I also formatted my `box plot` to show the outlier data as a red square - ` red_square = dict(markerfacecolor='r', marker='s')`
 
