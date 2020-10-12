@@ -11,8 +11,8 @@ Below you will see an analysis of the study as well as detailed results specific
 
 ## Table of contents
 * [Mouse Data](#mouse_data)
-* [Mouse Gender](#mouse_gender)
 * [Drug Regimens](#drug_regimens)
+* [Mouse Gender](#mouse_gender)
 * [Capomulin Deep Dive](#capomilin_deep_dive)
 * [Correlation](#correlation)
 * [Conclusion](#conclusoin)
