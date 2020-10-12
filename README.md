@@ -37,19 +37,26 @@ To calculate this date, I used functions found in `sci.py.stats` and `numpy`. I 
 
 To calculate the gender breakdown the mice participants, I used a `.groupby` function on my clean moue data. I grouped the data by gender and mouse ID and added a `nunique( )` count to find the total number of unique mice per gender. 
 
-I created a `pie plot` to show this date using two different methods- `Pandas` and `Pie Plot`. They both created identical charts. I then formatted my `pie plot` by assigning colors and number formatting, plot labels and a title. 
+I created a `pie plot` to show this date using two different methods- `Pandas` and `PyPlot`. They both created identical charts. I then formatted my `pie plot` by assigning colors and number formatting, plot labels and a title. 
 
 `Pandas` method: ` mice_gender.plot(kind="pie", explode=explode, shadow=True, startangle=45, 
                  colors=colors, autopct="%1.1f%%", title="Mouse Gender")`
 
-`Pie Plot` method: ` plt.pie(mice_gender, explode=explode, shadow=True, startangle=45, 
+`PyPlot` method: ` plt.pie(mice_gender, explode=explode, shadow=True, startangle=45, 
                  colors=colors, autopct="%1.1f%%", labels=labels)`
 
 ![Mice by Gender](Images/gender.PNG)
 
 ## Drug Regimens
 
+There were 9 Drug Regimens (and 1 placebo) used in this study. Each drug was given to a group of about 25 mice. The below charts show the number of timepoint data recorded per mice in each Drug Regimen. You will notice that the drugs Capomulin and Ramicane have the highest number of timepoint data recorded. This means that the mice give these drugs lived longer compared to mice using the other Drug Regimens. 
+
+To calculate this, I used the `.groupby` function to group my data by ‘Drug Regimen’. Then I used a `.count( )` function to count the number of timepoints logged for each drug. 
+
+I created `bar charts` to show this data. I used 2 methods to display the bar charts- `Pandas` and `PyPlot`. They both created identical charts. I then formatted my `bar chart` by assigning labels to the x and y axis a chart title. 
+
 ![Drug Regimens](Images/datapoints_reg.PNG)
+
 
 ![Box Plots](Images/box_plot.PNG)
 
