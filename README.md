@@ -1,7 +1,11 @@
 # Matplotlib: 
-The Power of Plots. 
 
-> Here goes your awesome project description!
+Pymaceuticals Inc: Analysis of Pharmaceuticals
+As the senior data analyst for Pymaceuticals Inc., a pharmaceutical company based in San Diego that specializes in anti-cancer treatments, I have been tasked to review data from a study of potential treatments for a commonly occurring skin cancer-  squamous cell carcinoma (SCC). 
+
+The study compared the effects of several drug regimens compared to the use of on in particular- Capomulin. Over the period of 45 days, 249 mice were treated with the different medications and their tumor growth was measured. 
+
+Below you will see an analysis of the study as well as detailed results specifically from the drug treatment Capomulin. 
 
 ![Laboratory](Images/Laboratory.PNG.jpg)
 
@@ -16,7 +20,16 @@ The Power of Plots.
 * [Contact](#contact)
 
 ## Mouse Data
-Add more general information about project. What the purpose of the project is? Motivation?
+
+The study was conducted on 249 mice over the course of 45 days. The mice were evaluated every 5 days and their tumor growth was measured. 
+
+To compile the data, I used a `pd.merge` function to combine to `csv` files into one combined `DataFrame`. I then used a `for loop` to locate any duplicate data logged per mouse ID. After locating duplicate data points, I used the `drop_duplicates` function to remove duplicate rows from the `DataFrame`. This left me with clean data for 249 mouse participants. 
+
+Below is a table showing the `mean`, `median`, `variance`, `standard deviation` and standard error of the mean, or `SEM`, for the tumor volume (measured in mm3) for each drug regimens. 
+
+To calculate this date, I used functions found in `sci.py.stats` and `numpy`. I was able to complete all calculations in one line of code by using an `.agg` function to apply the formulas to columns in a `DataFrame` . I went one step further to rename the column names for each equation to make the summary statsics easier to read. 
+
+` grouped_regimen.agg({"Tumor Volume (mm3)": ['mean', 'median', 'var', 'std', 'sem']}).rename(columns={'mean' : 'Mean', 'median' : 'Median', 'var' : 'Variance', 'std' : 'Standard Deviation', 'sem' : "SEM"})`
 
 ![Summary Statistics](Images/summary_stat.PNG)
 
