@@ -53,10 +53,27 @@ There were 9 Drug Regimens (and 1 placebo) used in this study. Each drug was giv
 
 To calculate this, I used the `.groupby` function to group my data by ‘Drug Regimen’. Then I used a `.count( )` function to count the number of timepoints logged for each drug. 
 
-I created `bar charts` to show this data. I used 2 methods to display the bar charts- `Pandas` and `PyPlot`. They both created identical charts. I then formatted my `bar chart` by assigning labels to the x and y axis a chart title. 
+I created `bar charts` to show this data. I used 2 methods to display the bar charts- `Pandas` and `PyPlot`. For the `Pandas` method, I used a `.count( )` function to count the number of timepoints logged for each drug. For the `PyPlot` method, I assigned a `len` formula to my x-axis ` x_axis = np.arange(len(timepoint_count))` 
+They both created identical charts. I then formatted my `bar chart` by assigning labels to the x and y axis and a chart title. 
+
+`Pandas` method: `mice_regimen = timepoint_count.plot(kind='bar')`
+
+`PyPlot` method: ` x_axis = np.arange(len(timepoint_count))`  `plt.bar(x_axis, timepoint_count)`  `plt.xticks(x_axis, timepoint_count.index, rotation=45)`
 
 ![Drug Regimens](Images/datapoints_reg.PNG)
 
+I then evaluated the results of four specific Drug Regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. I found the final timepoint logged for each mouse using these 4 drugs and created a list of the final tumor volume recorded. With these lists, I was able to plot them on a `Box Plot` to show the final tumor volumes and the potential outlier data per drug. 
+
+To create this set of data, I used a `.grouby` function on my clean data to group the data by Mouse ID and Drug Regimen. I then calculated the last timepoint recorded for each mouse by using the `.max( )` formula on the Timepoint data. ` max_timepoint = mouse_id["Timepoint"].max()`
+
+Then I used `pd.merge` to combine the clean mice data and my new `Max Timepoint` data. I merged the data on Mouse ID and Timepoint. 
+` combined_timepoint_df = pd.merge(combined_mice_df, max_timepoint, on=["Mouse ID", "Timepoint"])` 
+
+With the newly combined `DataFrame` that captures the last timepoint recorded of tumor volume, I created a list per drug regimen to hold these volumes. With each list, I calculated the outlier data by using the upper and lower bounds. I found that only the drug Infubinol had an outlier in the tumor volume data. 
+
+With this data calculated for each of the four specific drug regimens, I then created a combined `box plot`. I did this by creating a `[list]` of my drug regimen `lists` to plot. I also formatted my `box plot` to show the outlier data as a red square - ` red_square = dict(markerfacecolor='r', marker='s')`
+
+As you can see in the below Box Plot, Ramicane and Capomilin resulted in similar final tumor volume where Infubinol and Ceftamin had similar higher tumor volume. Infubinol is the only dataset with an outlier for tumor volume which can be seen below illustrated as a ‘red square’. 
 
 ![Box Plots](Images/box_plot.PNG)
 
