@@ -87,8 +87,19 @@ This is the code I used to plot below : ` plt.plot(mouse_data["Timepoint"], mous
 ![Capomulin Treatment](Images/mouseID.PNG)
 
 ## Correlation
-Show examples of usage:
-`put-your-code-here`
+I also decided to look at the correlation of average tumor volume to mouse weight. To analysis this, I used the `.groupby` function to group my capomulin data by Mouse ID and calculate the average date  by mouse with the `.mean( )` formula. 
+` mouse_average = capomulin_data.groupby(["Mouse ID"]).mean()`
+I then plotted these results on a `scatter plot` using `plt.scatter` 
+
+With this data I then calculated the correlation of Mouse weight to Tumor Volume by using the `Pearsonr` formula. I also rounded the result to 2 decimal points to make it easier to read. 
+` correlation = round(st.pearsonr(mouse_average['Weight (g)'], mouse_average['Tumor Volume (mm3)'])[0],2)` 
+
+I then added a line to the `scatter plot` to help illustrate the line regress. I used the formula of a line to calculate this. ` line_eq = "y = " + str(round(slope,2)) + "x + " + str(round(intercept,2))`
+
+I added the `line equation` to my `scatter plot` below by using `plt.annotate` and assigning a location to print the equation on the chart. I selected at the tick location of `(20,36)` . I also assigned the line to be ` color="red"` for easy viewing. 
+` plt.annotate(line_eq,(20,36),fontsize=15,color="red")`
+
+As you may have assumed, there is a positive correlation between mouse weigh and tumor volume. The heavier the moues, the larger the tumor volume is. 
 
 ![Line Regress](Images/line_reg_corr.PNG)
 
