@@ -87,7 +87,7 @@ This is the code I used to plot below : ` plt.plot(mouse_data["Timepoint"], mous
 ![Capomulin Treatment](Images/mouseID.PNG)
 
 ## Correlation
-I also decided to look at the correlation of average tumor volume to mouse weight. To analysis this, I used the `.groupby` function to group my capomulin data by Mouse ID and calculate the average date  by mouse with the `.mean( )` formula. 
+I also decided to look at the correlation of average tumor volume to mouse weight within the Capomulin data. To analysis this, I used the `.groupby` function to group my Capomulin data by Mouse ID and calculate the average date  by mouse with the `.mean( )` formula. 
 ` mouse_average = capomulin_data.groupby(["Mouse ID"]).mean()`
 I then plotted these results on a `scatter plot` using `plt.scatter` 
 
