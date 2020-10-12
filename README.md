@@ -1,6 +1,6 @@
-# Matplotlib: 
+# Matplotlib 
 
-Pymaceuticals Inc: Analysis of Pharmaceuticals
+Pymaceuticals Inc: Analysis of Pharmaceutical Capomulin
 As the senior data analyst for Pymaceuticals Inc., a pharmaceutical company based in San Diego that specializes in anti-cancer treatments, I have been tasked to review data from a study of potential treatments for a commonly occurring skin cancer-  squamous cell carcinoma (SCC). 
 
 The study compared the effects of several drug regimens on tumor growth on mice. Over the period of 45 days, 249 mice were treated with the different medications and their tumor growth was measured. 
