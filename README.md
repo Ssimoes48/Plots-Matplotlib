@@ -78,7 +78,11 @@ As you can see in the below Box Plot, Ramicane and Capomilin resulted in similar
 ![Box Plots](Images/box_plot.PNG)
 
 ## Capomulin Deep Dive
-Describe how to install / setup your local environement / add link to demo version.
+To further deep dive into the results of Capomulin specifically, I pulled out data of 1 mouse participant to show the progression of tumor volume over the 45-day case study.  
+
+To find the date of one mouse who was given Capomulin as treatment, I did a `df.loc` search in my clean `DataFrame` to find the mice who were given Capomulin. Form that list, I selected a mouse who had timepoint data recorded until the end of the study. I then ploted those time points on the below line chart to show the correlation of tumor volume over time while using the drug Capomulin. 
+
+This is the code I used to plot below : ` plt.plot(mouse_data["Timepoint"], mouse_data["Tumor Volume (mm3)"], marker="o")`  I also added `plt.grid( )` to make the chart easier to read. 
 
 ![Capomulin Treatment](Images/mouseID.PNG)
 
