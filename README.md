@@ -104,7 +104,14 @@ As you may have assumed, there is a positive correlation between mouse weigh and
 ![Line Regress](Images/line_reg_corr.PNG)
 
 ## Conclusion
-List of features ready and TODOs for future development
+From the study conducted by Pymaceuticals Inc on mice to evaluate different drug regimens on tumor growth, I can conclude the following: 
+
+1. Among the 9 drugs administered to the participating mice, the drugs Capomulin and Ramicane were the most effective in reducing tumor volume. 
+
+2. When comparing mouse weight with tumor, there is a positive correlation showing that mice with a greater weight have larger tumor volumes. 
+
+3. Over a 45-day period of time, a female mouse being given a drug regimen of Capomulin had a reduced tumor volume of about 21.66 mm3. 
+
 
 
 ## Jupyter Notebook
