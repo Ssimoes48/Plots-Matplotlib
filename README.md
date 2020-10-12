@@ -3,6 +3,8 @@ The Power of Plots.
 
 > Here goes your awesome project description!
 
+![Laboratory](Images/Laboratory_stat.PNG.jpg)
+
 ## Table of contents
 * [Mouse Data](#mouse_data)
 * [Mouse Gender](#mouse_gender)
