@@ -35,6 +35,16 @@ To calculate this date, I used functions found in `sci.py.stats` and `numpy`. I 
 
 ## Mouse Gender
 
+To calculate the gender breakdown the mice participants, I used a `.groupby` function on my clean moue data. I grouped the data by gender and mouse ID and added a `nunique( )` count to find the total number of unique mice per gender. 
+
+I created a `pie plot` to show this date using two different methods- `Pandas` and `Pie Plot`. They both created identical charts. I then formatted my `pie plot` by assigning colors and number formatting, plot labels and a title. 
+
+`Pandas` method: ` mice_gender.plot(kind="pie", explode=explode, shadow=True, startangle=45, 
+                 colors=colors, autopct="%1.1f%%", title="Mouse Gender")`
+
+`Pie Plot` method: ` plt.pie(mice_gender, explode=explode, shadow=True, startangle=45, 
+                 colors=colors, autopct="%1.1f%%", labels=labels)`
+
 ![Mice by Gender](Images/gender.PNG)
 
 ## Drug Regimens
